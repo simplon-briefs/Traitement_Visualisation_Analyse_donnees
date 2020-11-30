@@ -14,6 +14,10 @@ credits_immo_csv = pd.read_csv("Data_Vis/credit_immo.csv")
 credits_immo_json = pd.read_json("Data_Vis/credit_immo.json")
 credits_immo_xls = pd.read_excel("Data_Vis/credit_immo.xls")
 
+ar = np.array([[1.1, 2, np.nan, 4], [2.7, np.nan, 5.4, 7], [5.3, 9, 1.5, 15]])
+df = pd.DataFrame(ar, index = ['a1', 'a2', 'a3'], columns = ["taux_de_ventes", "croissance_vente", "ratio_benefice", "ratio_perte"])
+print(df)
+
 
 # 3.Traitement des données
 #3.2
@@ -73,6 +77,11 @@ aov_table
 #5.3
 df = pd.read_csv("Data_Vis/iris.csv")
 df_corr = df.corr()
+# faire tout les colomn df[["longueur_sepal", "largeur_sepal"]]
+print(df_corr)
 #5.3.1
 x = df["longueur_sepal"]
 y = df["longueur_petal"]
+
+
+
